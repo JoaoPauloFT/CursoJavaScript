@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos em DOM</title>
+    <style>
+        body {
+            background: blue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="nome">Clique em mim 2</div>
+    <script>
+        var corpo = window.document.body //Criou uma variavel para tratar o corpo da pagina
+        var p1 = window.document.getElementsByTagName('p')[0]//Criou uma variavel para tratar a tag 'p' dos paragrafos, selecionando o primeiro com o identificador [0]
+        document.write("Está escrito assim: " + p1.innerText)//Escreve na pagina e utiliza o texto da variavel que foi criada
+        p1.style.color = "black" //muda a cor da letra da variavel p1
+        corpo.style.background = "orange" //muda a cor de fundo da variavel corpo
+        var msg = document.getElementById('msg')//cria uma variavel utilizando o ID dela
+        msg.style.background = "pink"//mudou a cor de fundo da variavel selecionada
+        msg.innerText = "Mudei"//Muda o texto da variavel
+        var msg2 = document.getElementsByName('nome')[0]//Cria uma variavel atraves de um nome
+        msg2.innerText = "Mudei denovo..." + msg2.innerText//concatena o texto de uma variavel com um texto
+        var msgIgual = document.querySelector('div#msg')//Outro metodo de selecionar uma tag por id, funciona igual o getElementById
+        //querySelector utiliza # para id e . para class
+    </script>
+</body>
+</html>

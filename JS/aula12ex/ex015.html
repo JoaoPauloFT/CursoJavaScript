@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudações!</title>
+    <style>
+        body {
+            background-color: pink;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font: bold 30pt Arial;
+            padding-bottom: 10px;
+        }
+        div {
+            font: normal 18pt Arial;
+            color: black;
+            background-color: white;
+            width: 50%;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        img {
+            border-radius: 50%;
+            width: 200px;
+        }
+        p#rodape {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <div>
+        <p id="info">Agora são 21 horas.</p>
+        <img src="https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2013/05/28/93484304.jpg">
+    </div>
+    <p id="rodape">Feito por João Paulo!</p>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var fundo = document.getElementsByTagName('body')[0]
+        var imagem = document.getElementsByTagName('img')[0]
+        var texto =document.getElementById('info')
+        if (hora < 12) {
+            fundo.style.backgroundColor = 'burlywood'
+            imagem.src = 'https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2013/05/28/93484304.jpg'
+            texto.innerHTML = `Agora são ${hora} horas.`
+        } else if (hora < 18) {
+            fundo.style.backgroundColor = 'brown'
+            imagem.src = 'https://media-cdn.tripadvisor.com/media/photo-s/0f/34/3b/10/fim-de-tarde.jpg'
+            texto.innerHTML = `Agora são ${hora} horas.`
+        } else {
+            fundo.style.backgroundColor = 'gray'
+            imagem.src = 'https://image.freepik.com/vetores-gratis/estrelas-luzes-no-ceu-escuro-fundo_255524-129.jpg'
+            texto.innerHTML = `Agora são ${hora} horas.`
+        }
+    </script>
+</body>
+</html>

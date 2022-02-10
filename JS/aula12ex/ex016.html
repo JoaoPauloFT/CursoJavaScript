@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+    <style>
+        body {
+            background-color: gray;
+            color: white;
+        }
+
+        header {
+            font: bold 16pt Arial;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        section {
+            font: normal 12pt Arial;
+            color: black;
+            background-color: white;
+            width: 50%;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        div#resp {
+            text-align: center;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        footer {
+            font: italic 12pt Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Verificação de Idade</h1>
+    </header>
+    <section>
+        <div>
+            Ano de nascimento:<br />
+            <input type="number" name="ano" id="ano"><br />
+            <input type="radio" id="max" name="sexo" value="M">
+            <label for="html">Masculino</label><br>
+            <input type="radio" id="fem" name="sexo" value="F">
+            <label for="css">Feminino</label><br>
+            <input type="button" value="Verificar" onclick="calcular()">
+        </div>
+        <div id="resp">
+            <p id="txtResp">Preencha os dados acima para ver o resultado.</p>
+            <img id="imgResult" src="seila.png" alt="imagem_padrão">
+        </div>
+    </section>
+    <footer>
+        <p>Feito por João Paulo!</p>
+    </footer>
+    <script>
+        var img = document.getElementById('imgResult')
+        img.style.visibility = 'hidden'
+        function calcular() {
+            var ano = Number(document.getElementById('ano').value)
+            var sexo = document.querySelector('input[name="sexo"]:checked').value;
+
+            var agora = new Date()
+            var anoAtual = agora.getFullYear();
+            var idade = anoAtual - ano;
+
+            if(sexo == "M") {
+                document.body.style.backgroundColor = "lightblue"
+                document.getElementById('txtResp').innerText = "Detectamos um homem com " + idade + " anos!"
+                if(idade >= 60) {
+                    img.src = 'https://ingracio.adv.br/wp-content/uploads/2021/08/tenho-60-anos-posso-me-aposentar.jpg'
+                } else if (idade >= 35) {
+                    img.src = 'https://www.radiocacula.com.br/wp-content/uploads/media/images/8027/65371//5c1f80ad01de5567f17adfd4590200d3277c66b3e1594.png'
+                } else if (idade >= 18) {
+                    img.src = 'https://static.ndmais.com.br/2019/10/70441981_385089508785541_4302456744006647808_n-640x800.jpg'
+                } else {
+                    img.src = 'https://i.pinimg.com/236x/66/a9/f4/66a9f4c78b4b251144635ca5926d865a.jpg'
+                }
+            } else {
+                document.body.style.backgroundColor = "pink"
+                document.getElementById('txtResp').innerText = "Detectamos uma mulher com " + idade + " anos!"
+                if(idade >= 60) {
+                    img.src = 'https://rciararaquara.com.br/wp-content/uploads/2020/07/D%C3%A9bora.jpg'
+                } else if (idade >= 35) {
+                    img.src = 'https://www.bomjesusdalapanoticias.com.br/wp-content/uploads/2020/08/22222222222222222222222222222222-1.jpg'
+                } else if (idade >= 18) {
+                    img.src = 'https://s2.glbimg.com/yD_yYmUOGYbeLcr-Di6rQh-cosw=/e.glbimg.com/og/ed/f/original/2018/12/28/larissa-manoela.jpg'
+                } else {
+                    img.src = 'https://uploads.metropoles.com/wp-content/uploads/2019/09/18180544/lily2-600x400.jpg'
+                }
+            }
+            img.style.visibility = 'visible'
+        }
+        //function
+    </script>
+</body>
+
+</html>

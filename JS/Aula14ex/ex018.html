@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+        }
+
+        header {
+            font: bold 16pt Arial;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        section {
+            font: normal 12pt Arial;
+            color: black;
+            background-color: white;
+            width: 50%;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        div#resp {
+            text-align: center;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        footer {
+            font: italic 12pt Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            Taboada:
+            <input type="number" name="num" id="num">
+            <input type="button" value="Gerar Taboada" onclick="taboada()"><br /><br />
+            <select id="resultado" size="10"></select>
+        </div>
+    </section>
+    <footer>
+        <p>Feito por João Paulo!</p>
+    </footer>
+    <script>
+        function taboada() {
+            var num = Number(document.getElementById('num').value)
+            var result = ""
+            if (validar(num)){
+                for(var i = 0; i <= 10; i++){
+                    calc = num * i
+                    result = num + ' x ' + String(i) + ' = ' + calc
+                    document.getElementById('resultado').add(new Option(result, result))
+                }
+            }
+        }
+        function validar(num) {
+            if(num=='') {
+                alert("Digite algum número!")
+                return false
+            } else {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

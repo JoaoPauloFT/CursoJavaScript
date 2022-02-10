@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txt1" id="txt1">+
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="result"></div>
+    <script>
+        //mouseenter = quando o cursor entra na area da div
+        //mousemove = quando o cursor movimenta dentro da area da div
+        //mousedown = quando aperta e segura na area da div
+        //mouseup = quando vc para de clicar na area da div
+        //click = quando vc clica na area da div
+        //mouseout = quando vc tira o cursor da area da div
+        function somar() {
+            var n1 = Number(document.getElementById('txt1').value)
+            var n2 = Number(document.getElementById('txt2').value)
+            var result = n1 + n2
+            alert("A soma dos numeros "+ n1 + " e " + n2 + " é: " + result)
+            //document.getElementById('result').innerText = "O resultado é: " + result
+            document.getElementById('result').innerHTML = `O resultado é: ${result}`
+        }
+        
+    </script>
+</body>
+</html>
