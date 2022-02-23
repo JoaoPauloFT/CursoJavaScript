@@ -4,8 +4,8 @@ Estes são os algoritmos que eu desenvolvi durante o curso de __JavaScript__, na
 
 ## Links do curso e do canal:
 
-[Curso de JavaScript](https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
-[Canal Curso em Vídeo](https://www.youtube.com/c/CursoemVídeo)
-[Site Curso em Vídeo](https://www.cursoemvideo.com)
-[GitHub Gustavo Guanabara](https://github.com/gustavoguanabara)
-[GitHub Curso em Video](https://github.com/cursoemvideo)
+- [Curso de JavaScript](https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
+- [Canal Curso em Vídeo](https://www.youtube.com/c/CursoemVídeo)
+- [Site Curso em Vídeo](https://www.cursoemvideo.com)
+- [GitHub Gustavo Guanabara](https://github.com/gustavoguanabara)
+- [GitHub Curso em Video](https://github.com/cursoemvideo)
